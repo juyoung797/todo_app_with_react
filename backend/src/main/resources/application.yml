@@ -1,3 +1,13 @@
 spring:
   application:
     name: backend
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:todo_app_with_react}
+    username: ${DB_USERNAME:todo_app_with_react}
+    password: ${DB_PASSWORD:todo_app_with_react}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    time-zone: Asia/Seoul
